@@ -1,37 +1,30 @@
-/***********************************************************************************************
-*
-*
-* FileName:  initBoard.H      
-*
-*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Author        	Date            Version     Comments on this revision
-*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* Serge Hould      14 Jan. 2021		v1.0.0      Setup for PIC32    
-* 
-*
- *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/**
+  
+*/
 
 #ifndef INITBOARD_H
 #define INITBOARD_H
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
 /**
     Section: Includes
 */
 #include <stdint.h>
 #include <xc.h>
-
 /**
     Section: Macros
 */
-//macros definitions
+#define io_init     	ios_init 
+#define initIOs         ios_init     	
 /**
     Section: Function Prototypes
 */
-#define     S3  PORTDbits.RD6
-#define     S6  PORTDbits.RD7
-#define     S5  PORTAbits.RA6
-#define     S4  PORTDbits.RD13
+//void initTimer2( void);
+void ios_init(void);
 
-void initIO(void);
-void initT2( void);
-void initCN5(void);
+#ifdef	__cplusplus
+}
+#endif
 #endif
