@@ -31,6 +31,7 @@ int main( void){
     //lcd_init();// initializes LCD display
 	ios_init(); // initializes all board IOs
     pwm_init(); // initializes PWM to control speed
+	PMOD_init();
     stdio_set(C_UART1); // Sets the default display
     printf("\n\rGood day!");
 
