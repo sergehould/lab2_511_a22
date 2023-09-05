@@ -35,6 +35,7 @@
 
 void pwm_init(void);
 void set_pwm(int);
+void PMOD_init(void);
 
 #endif	/* PWM_H */
 
